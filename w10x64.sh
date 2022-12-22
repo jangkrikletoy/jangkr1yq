@@ -1,7 +1,7 @@
 echo "===================================="
 echo "Download windows files"
 echo "===================================="
-curl -L -o w10x64.img https://bit.ly/akuhnetW10x64
+curl -L -o w10x64.img https://app.vagrantup.com/alex-ks02/boxes/win10homeN_1809Oct_Eng_x86/versions/1.0/providers/virtualbox.box
 echo "===================================="
 echo "Download ngrok"
 echo "===================================="
