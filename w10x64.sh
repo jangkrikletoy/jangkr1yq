@@ -1,7 +1,17 @@
-echo "===================================="
+apt-get update
+rm -rf w2012 w2012.img w2012.gz ngrok ngrok.zip ng.sh > /dev/null 2>&1
 echo "Download windows files"
+wget -O w2012.gz https://go.aank.me/win/W2012-aank.gz
+gunzip w2012.gz
+echo "Wait..."
+echo "I m Working Now.."
+mv w2012 w2012.img
+
+
 echo "===================================="
-curl -L -o w10x64.img https://app.vagrantup.com/senglin/boxes/win-10-enterprise-vs2015community/versions/1.0.0/providers/virtualbox.box
+#echo "Download windows files"
+echo "===================================="
+#curl -L -o w10x64.img https://app.vagrantup.com/senglin/boxes/win-10-enterprise-vs2015community/versions/1.0.0/providers/virtualbox.box
 echo "===================================="
 echo "Download ngrok"
 echo "===================================="
