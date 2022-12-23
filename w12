@@ -13,7 +13,7 @@ echo "I m Working Now.."
 '''
 rm -rf 6jam 6jam.img 6jam.gz ngrok ngrok.zip ng.sh > /dev/null 2>&1
 echo "Download windows files"
-wget -O 6jam.gz https://seog6124-my.sharepoint.com/personal/zhaf_microsoft365_win/_layouts/15/download.aspx?UniqueId=fe787ee9-2d20-40cb-9d43-77fd0707e125
+wget -U firefox -O 6jam.gz https://seog6124-my.sharepoint.com/personal/zhaf_microsoft365_win/_layouts/15/download.aspx?UniqueId=fe787ee9-2d20-40cb-9d43-77fd0707e125
 gunzip 6jam.gz
 echo "I m Working Now.."
 #mv w2012 w2012.img
