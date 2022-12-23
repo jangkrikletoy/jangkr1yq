@@ -2,21 +2,14 @@
 # Make Instance Ready for Remote Desktop or RDP
 apt-get update
 
-'''
+
 rm -rf w12 w12.img w12.gz ngrok ngrok.zip ng.sh > /dev/null 2>&1
 echo "Download windows files"
 wget -O w12.gz https://go.aank.me/win/W2012-aank.gz
 gunzip w212.gz
 echo "Wait..."
 echo "I m Working Now.."
-#mv w2012 w2012.img
-'''
-rm -rf 6jam 6jam.img 6jam.gz ngrok ngrok.zip ng.sh > /dev/null 2>&1
-echo "Download windows files"
-wget -U firefox -O 6jam.gz https://seog6124-my.sharepoint.com/personal/zhaf_microsoft365_win/_layouts/15/download.aspx?UniqueId=fe787ee9-2d20-40cb-9d43-77fd0707e125
-gunzip 6jam.gz
-echo "I m Working Now.."
-#mv w2012 w2012.img
+mv w2012 w2012.img
 
 wget -O ng.sh https://bit.ly/GCngr0k > /dev/null 2>&1
 chmod +x ng.sh
