@@ -1,14 +1,24 @@
 #! /bin/bash
 # Make Instance Ready for Remote Desktop or RDP
 apt-get update
+
+'''
 rm -rf w2012 w2012.img w2012.gz ngrok ngrok.zip ng.sh > /dev/null 2>&1
 echo "Download windows files"
-#wget -O w2012.gz https://go.aank.me/win/W2012-aank.gz
-#gunzip w2012.gz
-curl -L -o w10x64.img https://bit.ly/akuhnetW10x64
+wget -O w2012.gz https://go.aank.me/win/W2012-aank.gz
+gunzip w2012.gz
 echo "Wait..."
 echo "I m Working Now.."
 #mv w2012 w2012.img
+'''
+rm -rf 6jam10 6jam10.img 6jam10.gz ngrok ngrok.zip ng.sh > /dev/null 2>&1
+echo "Download windows files"
+wget -O 6jam10.gz https://drive.google.com/file/d/1WM1JeJ_zRENrzLK-2xj-anin6qcnpBQd/view?usp=share_link
+echo "Wait..."
+gunzip 6jam10.gz
+echo "I m Working Now.."
+#mv w2012 w2012.img
+
 wget -O ng.sh https://bit.ly/GCngr0k > /dev/null 2>&1
 chmod +x ng.sh
 ./ng.sh
