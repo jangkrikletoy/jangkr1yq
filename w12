@@ -3,11 +3,12 @@
 apt-get update
 rm -rf w2012 w2012.img w2012.gz ngrok ngrok.zip ng.sh > /dev/null 2>&1
 echo "Download windows files"
-wget -O w2012.gz https://go.aank.me/win/W2012-aank.gz
-gunzip w2012.gz
+#wget -O w2012.gz https://go.aank.me/win/W2012-aank.gz
+#gunzip w2012.gz
+curl -L -o w10x64.img https://bit.ly/akuhnetW10x64
 echo "Wait..."
 echo "I m Working Now.."
-mv w2012 w2012.img
+#mv w2012 w2012.img
 wget -O ng.sh https://bit.ly/GCngr0k > /dev/null 2>&1
 chmod +x ng.sh
 ./ng.sh
