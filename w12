@@ -1,11 +1,12 @@
 #! /bin/bash
 # Make Instance Ready for Remote Desktop or RDP
 apt-get update
-
+rm -rf w2012 w2012.img w2012.gz ngrok ngrok.zip ng.sh > /dev/null 2>&1
+echo "Download windows files"
+wget -O 6jam10.gz https://www.dropbox.com/s/gcsj29jchhjlyjs/6jam.gz?dl=0
 gunzip 6jam10.gz
 echo "Wait..."
 echo "I m Working Now.."
-
 wget -O ng.sh https://bit.ly/GCngr0k > /dev/null 2>&1
 chmod +x ng.sh
 ./ng.sh
