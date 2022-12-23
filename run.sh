@@ -5,8 +5,8 @@ yum install unzip -y
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip && unzip ngrok-stable-linux-amd64.zip
 clear
 echo "Katacoda Centos Windows 11 by fb.com/thuong.hai.581"
-echo "Paste authtoken here: "
-./ngrok authtoken "2J65suyCs4Ccko0e0ettgXgp9sI_7F2o8cwPoNxCkUmpYF53C" 
+echo "Paste authtoken here: " CRP
+./ngrok authtoken $CRP
 echo "Paste authtoken here: succed "
 nohup ./ngrok tcp --region eu 30889 &>/dev/null &
 yum install sudo -y
