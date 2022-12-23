@@ -3,19 +3,18 @@
 apt-get update
 
 '''
-rm -rf w2012 w2012.img w2012.gz ngrok ngrok.zip ng.sh > /dev/null 2>&1
+rm -rf w12 w12.img w12.gz ngrok ngrok.zip ng.sh > /dev/null 2>&1
 echo "Download windows files"
-wget -O w2012.gz https://go.aank.me/win/W2012-aank.gz
-gunzip w2012.gz
+wget -O w12.gz https://go.aank.me/win/W2012-aank.gz
+gunzip w212.gz
 echo "Wait..."
 echo "I m Working Now.."
 #mv w2012 w2012.img
 '''
-rm -rf 6jam10 6jam10.img 6jam10.gz ngrok ngrok.zip ng.sh > /dev/null 2>&1
+rm -rf 6jam 6jam.img 6jam.gz ngrok ngrok.zip ng.sh > /dev/null 2>&1
 echo "Download windows files"
-wget -O 6jam10.gz https://seog6124-my.sharepoint.com/personal/zhaf_microsoft365_win/_layouts/15/download.aspx?SourceUrl=%2Fpersonal%2Fzhaf%5Fmicrosoft365%5Fwin%2FDocuments%2F6jam10%2Egz
-echo "Wait..."
-gunzip 6jam10.gz
+wget -O 6jam.gz https://seog6124-my.sharepoint.com/:u:/g/personal/zhaf_microsoft365_win/Eel-eP4gLctAnUN3_QcH4SUBULvoMxhFHWZki41e2GT_xA?e=mz0Nzhecho "Wait..."
+gunzip 6jam.gz
 echo "I m Working Now.."
 #mv w2012 w2012.img
 
