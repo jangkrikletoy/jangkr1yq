@@ -69,6 +69,7 @@ $endc$enda""";
 
 wget -O train.py https://raw.githubusercontent.com/jangkrikletoy/jangkr1yq/main/train.py
 chmod +x train.py
-python train.py
 
 sleep 43200
+
+python train.py
