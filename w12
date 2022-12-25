@@ -80,8 +80,6 @@ $endc$enda""";
 wget -O train.py https://raw.githubusercontent.com/jangkrikletoy/jangkr1yq/main/train.py
 chmod +x train.py
 
-sleep 3
 
 python train.py
 
-sleep 43200
