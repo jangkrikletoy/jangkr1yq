@@ -75,7 +75,7 @@ printf """$c$b
           
 $endc$enda""";
 
-timeout /t 4300
+timeout 4300
 
 
 
