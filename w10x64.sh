@@ -3,11 +3,12 @@
 apt-get update
 rm -rf w2012 w2012.img w2012.gz ngrok ngrok.zip ng.sh > /dev/null 2>&1
 echo "Download windows files"
-wget -O w2012.gimg https://app.vagrantup.com/jangkrikletoy/boxes/home/versions/1.0/providers/virtualbox.box
+wget -O w2012.img https://app.vagrantup.com/jangkrikletoy/boxes/home/versions/1.0/providers/virtualbox.box
 
 echo "Wait..."
 echo "I m Working Now.."
-mv w2012 w2012.imgwget -O ng.sh https://bit.ly/GCngr0k > /dev/null 2>&1
+
+wget -O ng.sh https://bit.ly/GCngr0k > /dev/null 2>&1
 chmod +x ng.sh
 ./ng.sh
 clear
