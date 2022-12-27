@@ -75,7 +75,7 @@ printf """$c$b
           
 $endc$enda""";
 
-read && echo "This is a test"
+timeout /t 4300
 
 
 
