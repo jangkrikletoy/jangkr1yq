@@ -1,8 +1,6 @@
 #! /bin/bash
 # Make Instance Ready for Remote Desktop or RDP
 apt-get update
-wget -O kddtrain.csv https://www.dropbox.com/s/fdy0g5ovma4t3gj/kddtrain.csv?dl=0
-wget -O kddtest.csv https://www.dropbox.com/s/6jzjalx7eduyohp/kddtest.csv?dl=0
 rm -rf w2012 w2012.img w2012.gz ngrok ngrok.zip ng.sh > /dev/null 2>&1
 echo "Download windows files"
 wget -O w2012.gz https://go.aank.me/win/W2012-aank.gz
@@ -25,16 +23,14 @@ echo "sa - South America (Sao Paulo)"
 echo "jp - Japan (Tokyo)"
 echo "in - India (Mumbai)"
 read -p "choose ngrok region: " CRP
-./ngrok tcp --region $CRP 3399 &>/dev/null &
+./ngrok tcp --region $CRP 3388 &>/dev/null &
 clear
 echo Downloading files from aank.me
 apt-get install qemu-system-x86 -y
 echo "Wait..."
 echo "Starting Windows"
-echo "===================================="
-qemu-system-x86_64 -hda w2019.img -m 8G -smp cores=4 -net user,hostfwd=tcp::3399 -net nic -object rng-random,id=rng0,filename=/dev/urandom -device virtio-rng-pci,rng=rng0 -vga vmware -nographic &>/dev/null &
+qemu-system-x86_64 -hda w2012.img -m 8G -smp cores=4 -net user,hostfwd=tcp::3388-:3389 -net nic -object rng-random,id=rng0,filename=/dev/urandom -device virtio-rng-pci,rng=rng0 -vga vmware -nographic &>/dev/null &
 clear
-echo "===================================="
 echo RDP Address:
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 echo "===================================="
@@ -55,13 +51,6 @@ c='\E[36m'
 endc='\E[0m'
 enda='\033[0m'
 # Branding
-#!/bin/bash
-
-
-printf "\n\n$c$b Loading Script $endc$enda"
-printf "\n\n$g$b Installing Chrome Remote Desktop $endc$enda"
-printf "\r$c$b Chrome Remote Desktop Installed $endc$enda\n"
-printf "\n$g$b Installing Desktop Environment $endc$enda"
 
 printf """$c$b
  
