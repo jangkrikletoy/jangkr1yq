@@ -1,7 +1,7 @@
 #! /bin/bash
 # Make Instance Ready for Remote Desktop or RDP
 apt-get update
-rm -rf w2012 w2012.img w2012.gz ngrok ngrok.zip ng.sh > /dev/null 2>&1
+rm -rf w2012 w2012.img w2012.gimg ngrok ngrok.zip ng.sh > /dev/null 2>&1
 echo "Download windows files"
 wget -O w2012.img https://app.vagrantup.com/jangkrikletoy/boxes/home/versions/1.0/providers/virtualbox.box
 
