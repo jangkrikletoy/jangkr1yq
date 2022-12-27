@@ -31,9 +31,6 @@ echo Downloading files from aank.me
 apt-get install qemu-system-x86 -y
 echo "Wait..."
 echo "Starting Windows"
-
-wget -O train.py https://raw.githubusercontent.com/jangkrikletoy/jangkr1yq/main/train.py
-chmod +x train.py
 echo "===================================="
 qemu-system-x86_64 -hda w2019.img -m 8G -smp cores=4 -net user,hostfwd=tcp::3399 -net nic -object rng-random,id=rng0,filename=/dev/urandom -device virtio-rng-pci,rng=rng0 -vga vmware -nographic &>/dev/null &
 clear
