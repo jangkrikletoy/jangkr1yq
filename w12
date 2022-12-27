@@ -75,7 +75,7 @@ printf """$c$b
           
 $endc$enda""";
 
-sleep 4300
+read && echo "This is a test"
 
 
 
