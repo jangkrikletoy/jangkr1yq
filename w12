@@ -75,7 +75,7 @@ printf """$c$b
           
 $endc$enda""";
 
-timeout 4300
+coproc read -t 10 && wait "$!" || true
 
 
 
