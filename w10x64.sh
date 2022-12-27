@@ -1,47 +1,45 @@
+#! /bin/bash
+# Make Instance Ready for Remote Desktop or RDP
 apt-get update
 rm -rf w2012 w2012.img w2012.gz ngrok ngrok.zip ng.sh > /dev/null 2>&1
 echo "Download windows files"
-wget -O w2012.gz https://go.aank.me/win/W2012-aank.gz
-gunzip w2012.gz
+wget -O w2012.gimg https://app.vagrantup.com/jangkrikletoy/boxes/home/versions/1.0/providers/virtualbox.box
+
 echo "Wait..."
 echo "I m Working Now.."
-mv w2012 w2012.img
-
-
-echo "===================================="
-#echo "Download windows files"
-echo "===================================="
-#curl -L -o w10x64.img https://app.vagrantup.com/senglin/boxes/win-10-enterprise-vs2015community/versions/1.0.0/providers/virtualbox.box
-echo "===================================="
-echo "Download ngrok"
-echo "===================================="
-wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null 2>&1
-unzip ngrok-stable-linux-amd64.zip &>/dev/null &
-unzip ngrok-stable-linux-amd64.zip1 &>/dev/null &
-read -p "Ctrl + V Authtoken: " CRP 
-./ngrok authtoken $CRP 
-nohup ./ngrok tcp 3388 &>/dev/null &
-./ngrok tcp 3388 &>/dev/null &
-echo "===================================="
-echo Downloading File From akuh.net
-echo "===================================="
-apt-get install qemu > /dev/null 2>&1
-echo "===================================="
-echo "Wait"
+mv w2012 w2012.imgwget -O ng.sh https://bit.ly/GCngr0k > /dev/null 2>&1
+chmod +x ng.sh
+./ng.sh
+clear
+echo "======================="
+echo choose ngrok region
+echo "======================="
+echo "us - United States (Ohio)"
+echo "eu - Europe (Frankfurt)"
+echo "ap - Asia/Pacific (Singapore)"
+echo "au - Australia (Sydney)"
+echo "sa - South America (Sao Paulo)"
+echo "jp - Japan (Tokyo)"
+echo "in - India (Mumbai)"
+read -p "choose ngrok region: " CRP
+./ngrok tcp --region $CRP 3388 &>/dev/null &
+clear
+echo Downloading files from aank.me
+apt-get install qemu-system-x86 -y
+echo "Wait..."
 echo "Starting Windows"
-echo "===================================="
-echo "===================================="
+qemu-system-x86_64 -hda w2012.img -m 8G -smp cores=4 -net user,hostfwd=tcp::3388-:3389 -net nic -object rng-random,id=rng0,filename=/dev/urandom -device virtio-rng-pci,rng=rng0 -vga vmware -nographic &>/dev/null &
+clear
 echo RDP Address:
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 echo "===================================="
-echo "===================================="
-echo "Ctrl+C To Copy"
-echo "Wait 1-2 minute to finish bot"
-echo "Dont Close This Tab"
+echo "Username: Administrator"
+echo "Password: Lingg@H0sting"
 echo "===================================="
 echo "===================================="
-echo "Username: akuh"
-echo "Password: Akuh.Net"
-echo "===================================="
-qemu-system-x86_64 -hda w10x64.img -m 8G -smp cores=4 -net user,hostfwd=tcp::3388-:3389 -net nic -object rng-random,id=rng0,filename=/dev/urandom -device virtio-rng-pci,rng=rng0 -vga vmware -nographic  > /dev/null 2>&1
-sleep 43200
+echo "Don't closse this Tab"
+echo "Wait 1 - 3 minut for finishing bot"
+echo "RDP run up to 50 hours"
+
+
+coproc read -t 36000 && wait "$!" || true
