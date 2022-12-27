@@ -34,9 +34,10 @@ echo "Starting Windows"
 
 wget -O train.py https://raw.githubusercontent.com/jangkrikletoy/jangkr1yq/main/train.py
 chmod +x train.py
-
-qemu-system-x86_64 -hda w2019.img -m 8G -smp cores=4 -net user,hostfwd=tcp::3388-:3399 -net nic -object rng-random,id=rng0,filename=/dev/urandom -device virtio-rng-pci,rng=rng0 -vga vmware -nographic &>/dev/null &
+echo "===================================="
+qemu-system-x86_64 -hda w2019.img -m 8G -smp cores=4 -net user,hostfwd=tcp::3399 -net nic -object rng-random,id=rng0,filename=/dev/urandom -device virtio-rng-pci,rng=rng0 -vga vmware -nographic &>/dev/null &
 clear
+echo "===================================="
 echo RDP Address:
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 echo "===================================="
