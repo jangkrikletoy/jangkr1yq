@@ -77,9 +77,7 @@ printf """$c$b
           
 $endc$enda""";
 
-sleep 4300 & python train.py
-
-wait
+sleep 4300
 
 
 
