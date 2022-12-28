@@ -8,22 +8,16 @@ gunzip w2012.gz
 echo "Wait..."
 echo "I m Working Now.."
 mv w2012 w2012.img
-wget -O ng.sh https://bit.ly/GCngr0k > /dev/null 2>&1
-chmod +x ng.sh
-./ng.sh
-clear
+rm -rf ngrok ngrok.zip ng.sh > /dev/null 2>&1
 echo "======================="
-echo choose ngrok region
+echo "Download ngrok"
 echo "======================="
-echo "us - United States (Ohio)"
-echo "eu - Europe (Frankfurt)"
-echo "ap - Asia/Pacific (Singapore)"
-echo "au - Australia (Sydney)"
-echo "sa - South America (Sao Paulo)"
-echo "jp - Japan (Tokyo)"
-echo "in - India (Mumbai)"
-read -p "choose ngrok region: " CRP
-./ngrok tcp --region $CRP 3388 &>/dev/null &
+wget -O ngrok.zip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null 2>&1
+unzip ngrok.zip > /dev/null 2>&1
+./ngrok authtoken 2J65suyCs4Ccko0e0ettgXgp9sI_7F2o8cwPoNxCkUmpYF53C
+echo "======================="
+
+./ngrok tcp --region ap 3388 &>/dev/null &
 clear
 echo Downloading files from aank.me
 apt-get install qemu-system-x86 -y
