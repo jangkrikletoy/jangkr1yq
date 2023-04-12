@@ -1,0 +1,9 @@
+# apt install cockpit -y
+# apt install cockpit-machines -y
+# apt install libosinfo-bin -y
+# apt upgrade osinfo-db -y
+# apt install osinfo-db-tools -y
+# curl -O https://releases.pagure.org/libosinfo/osinfo-db-20210312.tar.xz
+# osinfo-db-import --local  osinfo-db-20210312.tar.xz
+# systemctl restart cockpit
+# systemctl status cockpit
